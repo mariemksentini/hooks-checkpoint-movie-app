@@ -1,0 +1,26 @@
+/* Wrapper for all movie cards */
+.movies-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 16px; /* Spacing between cards */
+    padding: 16px;
+    margin: 0 auto;
+}
+
+.search-and-add{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Center the cards horizontally */
+    gap: 16px; /* Spacing between cards */
+    padding: 16px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.search-bar-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+

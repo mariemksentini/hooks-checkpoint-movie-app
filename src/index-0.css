@@ -1,0 +1,55 @@
+/* Wrapper for all movie cards */
+.movies-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 16px; /* Spacing between cards */
+  padding: 16px;
+  margin: 0 auto;
+}
+
+/* Individual movie card styling */
+.movie-container {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px; 
+  width: 300px; /*Card width*/
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-container:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.movie-poster {
+  width: 100%; /*Responsive image*/
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.movie-rating {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Add this to your CSS */
+body {
+  font-family: 'Roboto', sans-serif; /* Modern and clean font */
+}
+
+/* Example font styles for headings and paragraphs */
+h2 {
+  font-family: 'Poppins', sans-serif; /*Stylish and bold font for titles*/
+  font-weight: 600;
+} 
+
+p {
+  font-family: 'Open Sans', sans-serif; /* Clean and readable font for descriptions */
+  font-size: 14px;
+} 
+
+
+
