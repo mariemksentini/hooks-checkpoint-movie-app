@@ -11,14 +11,16 @@ function AddMovies({movies,setMovies}){
     const [newTitle, setNewTitle] = useState('')
     const [newDescription, setNewDescription] = useState('')
     const [newPosterURL, setNewPosterURL] = useState('')
+    const [newTrailerURL, setNewTrailerURL] = useState('')
     const [ratingValue, setRatingValue] = useState(0)
 
     function handleAddMovie() {
-        if (newTitle && newDescription && newPosterURL && ratingValue) {
+        if (newTitle && newDescription && newPosterURL && ratingValue ) {
           const newMovie = {
             title: newTitle,
             description: newDescription,
             posterURL: newPosterURL,
+            trailerURL : newTrailerURL,
             rating: ratingValue,
             id: Math.random(),
           };
@@ -26,6 +28,7 @@ function AddMovies({movies,setMovies}){
           setNewTitle(''); // Reset form fields
           setNewDescription('');
           setNewPosterURL('');
+          setNewTrailerURL('')
           setRatingValue(0);
           handleClose(); // Close modal
         } else {
@@ -64,6 +67,13 @@ function AddMovies({movies,setMovies}){
                         <Form.Label>Movie description</Form.Label>
                         <Form.Control
                         onChange={(e)=>setNewDescription(e.target.value)} 
+                        type="text" placeholder="Enter movie description..." />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicText">
+                        <Form.Label>Movie trailer URL</Form.Label>
+                        <Form.Control
+                        onChange={(e)=>setNewTrailerURL(e.target.value)} 
                         type="text" placeholder="Enter movie description..." />
                     </Form.Group>
 

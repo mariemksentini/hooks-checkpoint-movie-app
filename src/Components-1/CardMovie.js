@@ -1,7 +1,8 @@
 
 import Card from 'react-bootstrap/Card';
 import Rating from '@mui/material/Rating';
-import { useState } from 'react';
+import {  useState } from 'react';
+import { Link } from 'react-router-dom';
 function CardMovie({el}){
   const [seeMore,setSeeMore] = useState(false)
     return(
@@ -10,7 +11,7 @@ function CardMovie({el}){
       style={{height : '417px'}}
       variant="top" src={el.posterURL} />
       <Card.Body>
-        <Card.Title>{el.title}</Card.Title>
+        <Card.Title as={Link} to={`/MovieProfile/${el.id}`}>{el.title}</Card.Title>
         <Card.Text>
         {seeMore ? el.description : `${el.description.slice(0, 100)}...`}
         <button
@@ -27,6 +28,7 @@ function CardMovie({el}){
       </Card.Text>
         <Rating name="read-only" precision={0.5} value={el.rating} readOnly />
       </Card.Body>
+      
     </Card>
     )
 }
