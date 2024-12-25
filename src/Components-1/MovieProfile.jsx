@@ -26,7 +26,7 @@ console.log(found)
                     allowFullScreen 
                 />
                 <br/><br/>
-                <Button variant="outline-success" onClick={()=>navigate('/movies')} >Go back</Button>
+                <Button variant="outline-success" onClick={()=>navigate('/movies')} >🔙</Button>
             </div>
             
         </div>
